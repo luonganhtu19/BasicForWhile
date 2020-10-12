@@ -1,10 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Basic</title>
+
 </head>
-<body>
-$END$
+<body onload="unti1(),until2();until3();unit4()">
+<form>
+    <fieldset style="display: inline-block">
+        <legend><H1>For</H1></legend>
+        <fieldset >
+            <h1> Unit1: The Number N</h1>
+            <p id="outPut"></p>
+        </fieldset>
+        <fieldset>
+            <h1> Unit2: The sum to 0 from N</h1>
+            <p id="outPut2">Result: </p>
+        </fieldset>
+    </fieldset>
+    <fieldset>
+        <legend><H1>While</H1></legend>
+        <fieldset>
+            <h1>
+                UNIT 1
+            </h1>
+            <p id="outPut3">Result </p>
+        </fieldset>
+        <fieldset>
+            <legend>Unit4
+            </legend>
+            <p id="ouput4"></p>
+        </fieldset>
+    </fieldset>
+
+</form>
+
+<script>
+    function unti1() {
+        let text = "";
+        let i;
+        for (i = 0; i <= 5; i++) {
+            // text +="The number is "+ i+ "<br>";
+            text += i + "&nbsp;"
+        }
+        document.getElementById("outPut").innerHTML = text;
+    }
+
+    function until2() {
+        let num = +prompt("the number until 2");
+
+        if (num > 0) {
+            let sum = 0;
+            for (let i = 0; i <= num; i++) {
+                sum += i;
+            }
+            document.getElementById("outPut2").innerHTML = "Result "+ "from 0 to "+num+" is Sum = "  +sum;
+        }
+        else{
+            alert("Number is lager than 0")
+        }
+    }
+
+    function until3() {
+        let sum=0;
+        let num=0;
+        let text="";
+
+        while (true ){
+            num=+prompt("the number Until 3");
+            if(num==-1){
+                break;
+            }
+            for (let i=0;i<num;i++){
+            sum=sum+i;
+            }
+            text+= "Sum of "+num+ " is :"+ sum +"<br>";
+        }
+        document.getElementById("outPut3").innerHTML=text;
+    }
+    
+    function unit4() {
+        let i=1;
+        let text="";
+        while (i<100){
+            text+= "<hr width = " + i + "%>"
+            ;
+            i++;
+        }
+        document.getElementById("ouput4").innerHTML=text;
+    }
+</script>
 </body>
 </html>
